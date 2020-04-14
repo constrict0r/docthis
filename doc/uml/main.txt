@@ -1,0 +1,26 @@
+@startuml
+'Use plantuml to view this file as an image: http://plantuml.com'
+
+skinparam monochrome reverse
+
+start
+
+if (First run?) then (yes)
+  :Create sources;
+else (no)
+endif
+
+if (install_requirement == true) then (yes)
+  :Setup requirements;
+else (no)
+endif
+
+if (Sphinx is installed) then (yes)
+  :Generate documentation;
+else (no)
+  :Show error message;
+endif
+
+end
+
+@enduml
